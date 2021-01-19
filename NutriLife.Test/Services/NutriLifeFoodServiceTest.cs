@@ -1,5 +1,6 @@
 ﻿using NutriLife.Core.Domain;
 using NutriLife.Core.Services;
+using NutriLife.Domain.Enums;
 using System;
 using Xunit;
 
@@ -32,7 +33,6 @@ namespace NutriLife.Services
             Assert.Equal(FoodCreationResultCode.Success, result.Result.FoodCreationResultCode);
             Assert.Equal("Atum", result.Result.Food.Description);
         }
-
 
         [Fact]
         public async System.Threading.Tasks.Task ShouldCreateFoodWithNullValuesAsync()

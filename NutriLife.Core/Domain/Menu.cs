@@ -1,6 +1,5 @@
-﻿using NutriLife.Core.ValueObject;
-using NutriLife.Services;
-using System;
+﻿
+using NutriLife.Domain.Enums;
 
 namespace NutriLife.Core.Domain
 {

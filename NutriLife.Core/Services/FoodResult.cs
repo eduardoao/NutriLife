@@ -1,4 +1,5 @@
 ﻿using NutriLife.Core.Domain;
+using NutriLife.Domain.Enums;
 
 namespace NutriLife.Core.Services
 {
@@ -14,11 +15,5 @@ namespace NutriLife.Core.Services
         public Food Food { get; private set; }
 
     }
-
-
-    public enum FoodCreationResultCode
-    {
-        Success,
-        Error
-    }
+   
 }

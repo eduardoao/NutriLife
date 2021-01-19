@@ -1,4 +1,5 @@
 ﻿using NutriLife.Core.Domain;
+using NutriLife.Domain.Enums;
 using System;
 using System.Threading.Tasks;
 

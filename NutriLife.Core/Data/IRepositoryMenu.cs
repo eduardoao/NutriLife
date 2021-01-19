@@ -1,5 +1,5 @@
 ﻿using NutriLife.Core.Domain;
-using NutriLife.Core.ValueObject;
+using NutriLife.Domain.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 

@@ -1,4 +1,4 @@
-﻿namespace NutriLife.Core.ValueObject
+﻿namespace NutriLife.Domain.Enums
 {
     public enum  TypeMeal
     {
@@ -9,4 +9,5 @@
         Dinner,
         Supper
     }
+  
 }

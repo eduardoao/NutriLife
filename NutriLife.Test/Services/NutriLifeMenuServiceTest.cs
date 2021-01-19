@@ -1,12 +1,12 @@
 ﻿using Moq;
 using NutriLife.Core.Domain;
 using NutriLife.Core.Services;
-using NutriLife.Core.ValueObject;
 using NutriLife.Core.Data;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xunit;
+using NutriLife.Domain.Enums;
 
 namespace NutriLife.Test
 {
