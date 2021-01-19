@@ -19,7 +19,7 @@ namespace NutriLife.Services
         {
             //ACT
             var personService = new PersonService();
-            Task<CreatePersonResult> result = personService.CreatePerson(_person);
+            Task<PersonResult> result = personService.CreatePerson(_person);
 
             //Assert
             Assert.Equal("Sucess",  result.Result.ResultCode);
@@ -35,7 +35,7 @@ namespace NutriLife.Services
 
             //ACT
             var personService = new PersonService();
-            Task<CreatePersonResult> result = personService.CreatePerson(_person);
+            Task<PersonResult> result = personService.CreatePerson(_person);
 
             //ACT and Assert  
             var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => personService.CreatePerson(_person));

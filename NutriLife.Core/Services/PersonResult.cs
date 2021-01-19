@@ -2,9 +2,9 @@
 
 namespace NutriLife.Services
 {
-    public class CreatePersonResult
+    public class PersonResult
     {
-        public CreatePersonResult(Person person)
+        public PersonResult(Person person)
         {
             Person = person;
         }

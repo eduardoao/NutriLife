@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace NutriLife.Services
 {
-    public class PersonService
+    public class PersonService : IPersonService
     {
         private Person _person;
 
@@ -17,14 +17,14 @@ namespace NutriLife.Services
             _person = person;
         }
 
-        public async Task<CreatePersonResult> CreatePerson(Person person)
+        public async Task<PersonResult> CreatePerson(Person person)
         {
             if (person == null)
             {
                 throw new ArgumentNullException(nameof(Person));
             }
 
-            CreatePersonResult result = new CreatePersonResult(person);
+            PersonResult result = new PersonResult(person);
             result.ResultCode = "Sucess";
 
             return result;

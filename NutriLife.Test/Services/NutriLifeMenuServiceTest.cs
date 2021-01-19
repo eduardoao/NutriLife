@@ -13,8 +13,7 @@ namespace NutriLife.Test
     public class NutriLifeMenuServiceTest
     {
         Person _person = null;
-        private readonly IMenuService _menuRequestService;
-        private readonly IRepositoryPerson _repositoryPerson;
+        private readonly IMenuService _menuRequestService;       
 
         public NutriLifeMenuServiceTest()
         {
@@ -27,7 +26,6 @@ namespace NutriLife.Test
             repositoryPersonMock.Setup(menu => menu.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(_person);
 
             _menuRequestService = new MenuService(repositoryMenuMock.Object, repositoryPersonMock.Object);
-
         }    
 
         [Fact]
@@ -66,7 +64,14 @@ namespace NutriLife.Test
             Assert.Equal("Person", exception.ParamName);
 
         }
-              
+        
+        [Fact]
+        public async Task ShouldCreateMenuForPerson()
+        {
+
+
+        }
+
         private void CreatePerson()
         {
             _person = new Person("Eduardo", "Oliveira", 43, 95);
@@ -74,8 +79,9 @@ namespace NutriLife.Test
 
         private List<Menu> GetFakeMenu()
         {
+            var food = new Food("Cereal", 50);
             var result = new List<Menu>();
-            var itemMenuResult = new Menu(TypeMeal.BreakFest, "Cereal", 1, TypeQuantityMeal.Unit);
+            var itemMenuResult = new Menu(TypeMeal.BreakFest, food, 1, TypeQuantityMeal.Unit);
 
             result.Add(itemMenuResult);
 
