@@ -13,7 +13,11 @@ namespace NutriLife.Test
     public class NutriLifeMenuServiceTest
     {
         Person _person = null;
-        private readonly IMenuService _menuRequestService;       
+        private readonly IMenuService _menuRequestService;
+
+        private readonly IMenuForPersonService _menurFoPersonService;
+
+        Meal _meal = null;
 
         public NutriLifeMenuServiceTest()
         {
@@ -26,22 +30,27 @@ namespace NutriLife.Test
             repositoryPersonMock.Setup(menu => menu.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(_person);
 
             _menuRequestService = new MenuService(repositoryMenuMock.Object, repositoryPersonMock.Object);
+
+            _menurFoPersonService = new MenuForPersonService();
+            
         }    
 
         [Fact]
         public void ShouldReturnMenuResultWithValues()
         {
             //Arrage 
-            var breakfest = new Meal(_person, TypeMeal.BreakFest);
+            CreateMeal();
 
             //ACT and Assert     
-            var result = _menuRequestService.GetMenuResult(breakfest);
+            var result = _menuRequestService.GetMenuResult(_meal);
 
             //Assert
             Assert.NotNull(result);
-            Assert.Single(result.Result.MenuItens);           
+            Assert.Single(result.Result.MenuItens);
 
         }
+
+      
 
         [Fact]
         public async Task ShouldReturnMenuResultIsNull()
@@ -68,10 +77,18 @@ namespace NutriLife.Test
         [Fact]
         public async Task ShouldCreateMenuForPerson()
         {
+            CreateMeal();
+            //ACT 
+            var result = _menurFoPersonService.Save(_person, _meal);
 
-
+            //Assert
+            Assert.True(result);
         }
 
+        private void CreateMeal()
+        {
+            _meal = new Meal(_person, TypeMeal.BreakFest);
+        }
         private void CreatePerson()
         {
             _person = new Person("Eduardo", "Oliveira", 43, 95);

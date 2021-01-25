@@ -6,3 +6,12 @@ C:\Users\administracao\source\repos\NutriLife\NutriLife.Core\obj\Debug\netcoreap
 C:\Users\administracao\source\repos\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.csproj.CoreCompileInputs.cache
 C:\Users\administracao\source\repos\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.dll
 C:\Users\administracao\source\repos\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.pdb
+D:\Repositories\NutriLife\NutriLife.Core\bin\Debug\netcoreapp3.1\NutriLife.Core.deps.json
+D:\Repositories\NutriLife\NutriLife.Core\bin\Debug\netcoreapp3.1\NutriLife.Core.dll
+D:\Repositories\NutriLife\NutriLife.Core\bin\Debug\netcoreapp3.1\NutriLife.Core.pdb
+D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.csprojAssemblyReference.cache
+D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.AssemblyInfoInputs.cache
+D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.AssemblyInfo.cs
+D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.csproj.CoreCompileInputs.cache
+D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.dll
+D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.pdb

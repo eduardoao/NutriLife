@@ -8,19 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\administracao\\.nuget\\packages\\": {}
+    "C:\\Users\\eduar\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\administracao\\source\\repos\\NutriLife\\NutriLife.Core\\NutriLife.Core.csproj",
+      "projectUniqueName": "D:\\Repositories\\NutriLife\\NutriLife.Core\\NutriLife.Core.csproj",
       "projectName": "NutriLife.Core",
-      "projectPath": "C:\\Users\\administracao\\source\\repos\\NutriLife\\NutriLife.Core\\NutriLife.Core.csproj",
-      "packagesPath": "C:\\Users\\administracao\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\administracao\\source\\repos\\NutriLife\\NutriLife.Core\\obj\\",
+      "projectPath": "D:\\Repositories\\NutriLife\\NutriLife.Core\\NutriLife.Core.csproj",
+      "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
+      "outputPath": "D:\\Repositories\\NutriLife\\NutriLife.Core\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
       "configFilePaths": [
-        "C:\\Users\\administracao\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
