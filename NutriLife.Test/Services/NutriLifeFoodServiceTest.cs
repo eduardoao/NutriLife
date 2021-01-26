@@ -5,7 +5,7 @@ using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace NutriLife.Services
+namespace NutriLife.Test.Services
 {
     public class NutriLifeFoodServiceTest
     {

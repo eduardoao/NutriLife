@@ -9,8 +9,7 @@ namespace NutriLife.Core.Result
         public MenuResult()
         {
             CreateItens();
-        }
-              
+        }              
 
         public MenuResult(DateTime dateTime, Person person)
         {

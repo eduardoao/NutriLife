@@ -1,7 +1,7 @@
 ﻿using NutriLife.Core.Domain;
 using NutriLife.Domain.Enums;
 
-namespace NutriLife.Core.Services
+namespace NutriLife.Core.Result
 {
     public class FoodResult
     {

@@ -1,4 +1,5 @@
-﻿using NutriLife.Core.Domain;
+﻿using NutriLife.Core.Data;
+using NutriLife.Core.Domain;
 using System;
 using System.Threading.Tasks;
 
@@ -6,11 +7,13 @@ namespace NutriLife.Core.Services
 {
     public class MenuForPersonService : IMenuForPersonService
     {
-        public MenuForPersonService()
+        private readonly IRepositoryMenu _repositoryMenu;
+        public MenuForPersonService(IRepositoryMenu repositoryMenu)
         {
+            _repositoryMenu = repositoryMenu;
         }
 
-        async Task<bool> IMenuForPersonService.Save(Person person, Meal meal)
+        public async Task<bool> Save(Person person, Meal meal)
         {
             if (person == null)
             {
@@ -22,7 +25,10 @@ namespace NutriLife.Core.Services
                 throw new ArgumentNullException(nameof(meal));
             }
 
-            return  true;
+            var idPerson = person.Id;
+            var result = _repositoryMenu.SaveMealByPersonIdAsync(idPerson, meal);
+            return result.Result;
+            
         }
     }
 }

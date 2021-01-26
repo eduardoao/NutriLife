@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using Xunit;
 using NutriLife.Domain.Enums;
 
-namespace NutriLife.Test
+namespace NutriLife.Test.Services
 {
     public class NutriLifeMenuServiceTest
     {
@@ -24,15 +24,17 @@ namespace NutriLife.Test
         {
             CreatePerson();
             var repositoryMenuMock = new Mock<IRepositoryMenu>();
-            repositoryMenuMock.Setup(menu => menu.GetAllMenuByTypeMealByCustomerIdAsync(It.IsAny<int>(), It.IsAny<TypeMeal>()))
+            repositoryMenuMock.Setup(menu => menu.GetAllMenuByTypeMealByPersonIdAsync(It.IsAny<int>(), It.IsAny<TypeMeal>()))
                 .ReturnsAsync(GetFakeMenu());
+
+            repositoryMenuMock.Setup(menu => menu.SaveMealByPersonIdAsync(It.IsAny<int>(), It.IsAny<Meal>()))
+              .ReturnsAsync(true);
 
             var repositoryPersonMock = new Mock<IRepositoryPerson>();
             repositoryPersonMock.Setup(menu => menu.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(_person);
 
             _menuRequestService = new MenuService(repositoryMenuMock.Object, repositoryPersonMock.Object);
-
-            _menurFoPersonService = new MenuForPersonService();
+            _menurFoPersonService = new MenuForPersonService(repositoryMenuMock.Object);
             
         }
         #endregion

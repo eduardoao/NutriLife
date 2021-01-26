@@ -1,5 +1,5 @@
 ﻿using NutriLife.Core.Domain;
-using NutriLife.Services;
+using NutriLife.Core.Result;
 using System.Threading.Tasks;
 
 namespace NutriLife.Core.Services

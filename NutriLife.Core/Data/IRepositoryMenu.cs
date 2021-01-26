@@ -7,6 +7,8 @@ namespace NutriLife.Core.Data
 {
     public interface IRepositoryMenu : IRepository<Menu>
     {
-        Task <IList<Menu>> GetAllMenuByTypeMealByCustomerIdAsync(int customerId, TypeMeal typeMeal);
+        Task <IList<Menu>> GetAllMenuByTypeMealByPersonIdAsync(int customerId, TypeMeal typeMeal);
+
+        Task<bool> SaveMealByPersonIdAsync(int customerId, Meal meal);
     }
 }

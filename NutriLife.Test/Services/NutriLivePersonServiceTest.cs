@@ -1,10 +1,11 @@
 ﻿using NutriLife.Core.Domain;
 using NutriLife.Core.Result;
+using NutriLife.Services;
 using System;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace NutriLife.Services
+namespace NutriLife.Test.Services
 {
     public class NutriLivePersonServiceTest
     {

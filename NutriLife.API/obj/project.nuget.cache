@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PNOGaLCkSteYk+mr1fSgDQXW1wm69hu5E2gMnLsyIiJzlSbCk31pmtKqlll9QvSfwiofC0E7VrjmviqGEyReKw==",
+  "success": true,
+  "projectFilePath": "D:\\Repositories\\NutriLife\\NutriLife.API\\NutriLife.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.10\\microsoft.visualstudio.azure.containers.tools.targets.1.10.10.nupkg.sha512"
+  ],
+  "logs": []
+}
