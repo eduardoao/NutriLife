@@ -1,4 +1,5 @@
 ﻿using NutriLife.Core.Domain;
+using NutriLife.Core.Result;
 using System;
 using System.Threading.Tasks;
 using Xunit;
@@ -7,13 +8,18 @@ namespace NutriLife.Services
 {
     public class NutriLivePersonServiceTest
     {
+        #region Atributes
         Person _person = null;
+        #endregion
 
+        #region Constructors
         public NutriLivePersonServiceTest()
         {
             CreatePerson();
-        }       
+        }
+        #endregion
 
+        #region Public_Method
         [Fact]
         public async Task ShouldCreatePersonCorrectWithValues()
         {
@@ -25,7 +31,6 @@ namespace NutriLife.Services
             Assert.Equal("Sucess",  result.Result.ResultCode);
             Assert.Equal(_person.FirtName, result.Result.Person.FirtName);
         }
-
 
         [Fact]
         public async Task ShouldCreatePersonIsNull()
@@ -43,13 +48,14 @@ namespace NutriLife.Services
             Assert.Equal("Person", exception.ParamName);
 
         }
+        #endregion
 
-
+        #region Private_Method
         // Arrage 
         private void CreatePerson()
         {
             _person = new Person("Eduardo", "Oliveira", 43, 95);
         }
-
+        #endregion
     }
 }

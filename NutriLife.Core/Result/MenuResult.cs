@@ -2,11 +2,10 @@
 using System;
 using System.Collections.Generic;
 
-namespace NutriLife.Core.Services
+namespace NutriLife.Core.Result
 {
     public class MenuResult: Base
-    {    
-
+    { 
         public MenuResult()
         {
             CreateItens();

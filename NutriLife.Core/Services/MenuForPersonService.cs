@@ -1,5 +1,6 @@
 ﻿using NutriLife.Core.Domain;
 using System;
+using System.Threading.Tasks;
 
 namespace NutriLife.Core.Services
 {
@@ -9,9 +10,19 @@ namespace NutriLife.Core.Services
         {
         }
 
-        public bool Save(Person person, Meal meal)
+        async Task<bool> IMenuForPersonService.Save(Person person, Meal meal)
         {
-            return true;
+            if (person == null)
+            {
+                throw new ArgumentNullException(nameof(person));
+            }
+
+            if (meal == null)
+            {
+                throw new ArgumentNullException(nameof(meal));
+            }
+
+            return  true;
         }
     }
 }

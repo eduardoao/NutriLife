@@ -1,6 +1,6 @@
 ﻿using NutriLife.Core.Domain;
 
-namespace NutriLife.Services
+namespace NutriLife.Core.Result
 {
     public class PersonResult
     {

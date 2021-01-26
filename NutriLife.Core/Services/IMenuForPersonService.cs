@@ -1,9 +1,10 @@
 ﻿using NutriLife.Core.Domain;
+using System.Threading.Tasks;
 
 namespace NutriLife.Core.Services
 {
     public interface IMenuForPersonService
     {
-        bool Save(Person person, Meal meal);
+        Task<bool> Save(Person person, Meal meal);
     }
 }

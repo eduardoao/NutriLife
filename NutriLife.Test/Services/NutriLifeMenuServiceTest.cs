@@ -12,13 +12,14 @@ namespace NutriLife.Test
 {
     public class NutriLifeMenuServiceTest
     {
+        #region Atributes
         Person _person = null;
-        private readonly IMenuService _menuRequestService;
-
-        private readonly IMenuForPersonService _menurFoPersonService;
-
         Meal _meal = null;
+        private readonly IMenuService _menuRequestService;
+        private readonly IMenuForPersonService _menurFoPersonService;
+        #endregion
 
+        #region Constructors
         public NutriLifeMenuServiceTest()
         {
             CreatePerson();
@@ -33,8 +34,10 @@ namespace NutriLife.Test
 
             _menurFoPersonService = new MenuForPersonService();
             
-        }    
+        }
+        #endregion
 
+        #region Public_Method
         [Fact]
         public void ShouldReturnMenuResultWithValues()
         {
@@ -49,9 +52,7 @@ namespace NutriLife.Test
             Assert.Single(result.Result.MenuItens);
 
         }
-
-      
-
+  
         [Fact]
         public async Task ShouldReturnMenuResultIsNull()
         {
@@ -73,7 +74,25 @@ namespace NutriLife.Test
             Assert.Equal("Person", exception.ParamName);
 
         }
-        
+
+        [Fact]
+        public async Task ShouldCreateMenuForPersonWhePersonIsNull()
+        {
+            _person = null;
+            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => _menurFoPersonService.Save(_person, _meal));
+
+            Assert.Equal("person", exception.ParamName);
+        }
+
+        [Fact]
+        public async Task ShouldCreateMenuForPersonWheMealIsNull()
+        {
+            _meal = null;
+            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => _menurFoPersonService.Save(_person, _meal));
+
+            Assert.Equal("meal", exception.ParamName);
+        }
+
         [Fact]
         public async Task ShouldCreateMenuForPerson()
         {
@@ -82,9 +101,11 @@ namespace NutriLife.Test
             var result = _menurFoPersonService.Save(_person, _meal);
 
             //Assert
-            Assert.True(result);
+            Assert.True(result.Result);
         }
+        #endregion
 
+        #region Privaty_Method
         private void CreateMeal()
         {
             _meal = new Meal(_person, TypeMeal.BreakFest);
@@ -93,7 +114,6 @@ namespace NutriLife.Test
         {
             _person = new Person("Eduardo", "Oliveira", 43, 95);
         }
-
         private List<Menu> GetFakeMenu()
         {
             var food = new Food("Cereal", 50);
@@ -105,5 +125,6 @@ namespace NutriLife.Test
             return result;
         }
 
+        #endregion
     }
 }

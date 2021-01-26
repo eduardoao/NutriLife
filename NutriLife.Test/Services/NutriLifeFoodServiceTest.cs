@@ -2,12 +2,14 @@
 using NutriLife.Core.Services;
 using NutriLife.Domain.Enums;
 using System;
+using System.Threading.Tasks;
 using Xunit;
 
 namespace NutriLife.Services
 {
     public class NutriLifeFoodServiceTest
     {
+        #region Atributes
         private IFoodService _foodService;
         private Food food;
         public NutriLifeFoodServiceTest()
@@ -18,7 +20,9 @@ namespace NutriLife.Services
             food = new Food("Atum", 50);
 
         }
+        #endregion
 
+        #region Public_Method
         [Fact]
         public void ShouldCreateFoodWithValues()
         {
@@ -35,7 +39,7 @@ namespace NutriLife.Services
         }
 
         [Fact]
-        public async System.Threading.Tasks.Task ShouldCreateFoodWithNullValuesAsync()
+        public async Task ShouldCreateFoodWithNullValuesAsync()
         {
             //ACT
             food = null;
@@ -45,6 +49,7 @@ namespace NutriLife.Services
             var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => _foodService.CreateFood(food));
 
             Assert.Equal("Food", exception.ParamName);
-        }     
+        }
+        #endregion
     }
 }
