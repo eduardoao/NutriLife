@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="Interfaces\Adapter\" />
     <Folder Include="ValueObject\" />
   </ItemGroup>
 

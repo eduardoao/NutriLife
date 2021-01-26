@@ -2,7 +2,7 @@
 using NutriLife.Core.Result;
 using System.Threading.Tasks;
 
-namespace NutriLife.Services
+namespace NutriLife.Interfaces.Services
 {
     public interface IPersonService
     {

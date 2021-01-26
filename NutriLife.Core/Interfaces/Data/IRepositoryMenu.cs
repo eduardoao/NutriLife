@@ -3,7 +3,7 @@ using NutriLife.Domain.Enums;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace NutriLife.Core.Data
+namespace NutriLife.Interfaces.Data
 {
     public interface IRepositoryMenu : IRepository<Menu>
     {

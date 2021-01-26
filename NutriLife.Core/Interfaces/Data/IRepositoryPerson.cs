@@ -1,6 +1,6 @@
 ﻿using NutriLife.Core.Domain;
 
-namespace NutriLife.Core.Data
+namespace NutriLife.Interfaces.Data
 {
     public interface IRepositoryPerson : IRepository<Person>
     {       

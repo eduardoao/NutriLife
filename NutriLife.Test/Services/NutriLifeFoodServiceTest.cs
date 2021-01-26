@@ -1,6 +1,7 @@
 ﻿using NutriLife.Core.Domain;
 using NutriLife.Core.Services;
 using NutriLife.Domain.Enums;
+using NutriLife.Interfaces.Services;
 using System;
 using System.Threading.Tasks;
 using Xunit;

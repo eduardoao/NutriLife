@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace NutriLife.Core.Data
+namespace NutriLife.Interfaces.Data
 {
     public interface IRepository<T> where T : Base
     {

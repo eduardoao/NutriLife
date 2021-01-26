@@ -1,5 +1,6 @@
-﻿using NutriLife.Core.Data;
-using NutriLife.Core.Domain;
+﻿using NutriLife.Core.Domain;
+using NutriLife.Interfaces.Data;
+using NutriLife.Interfaces.Services;
 using System;
 using System.Threading.Tasks;
 

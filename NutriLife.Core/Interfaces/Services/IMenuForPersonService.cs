@@ -1,7 +1,7 @@
 ﻿using NutriLife.Core.Domain;
 using System.Threading.Tasks;
 
-namespace NutriLife.Core.Services
+namespace NutriLife.Interfaces.Services
 {
     public interface IMenuForPersonService
     {
