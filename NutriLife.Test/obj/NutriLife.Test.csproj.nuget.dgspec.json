@@ -104,6 +104,10 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[32.0.2, )"
+            },
             "MSTest.TestFramework": {
               "target": "Package",
               "version": "[2.1.2, )"

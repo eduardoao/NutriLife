@@ -1,4 +1,5 @@
 ﻿using NutriLife.Core.Domain;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -8,7 +9,7 @@ namespace NutriLife.Interfaces.Data
     {
         Task<IEnumerable<T>> GetAllAsync();
 
-        Task<T> GetByIdAsync(int id);
+        Task<T> GetByIdAsync(Guid id);
 
         Task<T> SaveAsync(T entity);
     }

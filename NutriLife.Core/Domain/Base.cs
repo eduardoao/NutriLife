@@ -1,7 +1,9 @@
-﻿namespace NutriLife.Core.Domain
+﻿using System;
+
+namespace NutriLife.Core.Domain
 {
     public class Base
     {
-        public int Id { get;  set; }
+        public Guid Id { get;  set; }
     }
 }

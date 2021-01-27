@@ -1,5 +1,7 @@
-﻿using NutriLife.Core.Domain;
+﻿using Moq;
+using NutriLife.Core.Domain;
 using NutriLife.Core.Result;
+using NutriLife.Interfaces.Data;
 using NutriLife.Services;
 using System;
 using System.Threading.Tasks;
@@ -11,12 +13,18 @@ namespace NutriLife.Test.Services
     {
         #region Atributes
         Person _person = null;
+        PersonService _personService; 
         #endregion
 
         #region Constructors
         public NutriLivePersonServiceTest()
         {
             CreatePerson();
+            var repositoryPersonMock = new Mock<IRepositoryPerson>();
+            repositoryPersonMock.Setup(person => person.SaveAsync(_person))
+                .ReturnsAsync(_person);
+
+            _personService = new PersonService(repositoryPersonMock.Object);
         }
         #endregion
 
@@ -25,8 +33,8 @@ namespace NutriLife.Test.Services
         public async Task ShouldCreatePersonCorrectWithValues()
         {
             //ACT
-            var personService = new PersonService();
-            Task<PersonResult> result = personService.CreatePerson(_person);
+          
+            Task<PersonResult> result = _personService.CreatePerson(_person);
 
             //Assert
             Assert.Equal("Sucess",  result.Result.ResultCode);
@@ -39,12 +47,11 @@ namespace NutriLife.Test.Services
             //Arrage 
             _person = null;
 
-            //ACT
-            var personService = new PersonService();
-            Task<PersonResult> result = personService.CreatePerson(_person);
+            //ACT           
+            Task<PersonResult> result = _personService.CreatePerson(_person);
 
             //ACT and Assert  
-            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => personService.CreatePerson(_person));
+            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => _personService.CreatePerson(_person));
 
             Assert.Equal("Person", exception.ParamName);
 
@@ -55,7 +62,7 @@ namespace NutriLife.Test.Services
         // Arrage 
         private void CreatePerson()
         {
-            _person = new Person("Eduardo", "Oliveira", 43, 95);
+            _person = new Person("Eduardo", "Oliveira", 43, 95, Guid.NewGuid());
         }
         #endregion
     }

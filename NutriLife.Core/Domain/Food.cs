@@ -1,6 +1,6 @@
 ﻿namespace NutriLife.Core.Domain
 {
-    public class Food
+    public class Food: Base
     {
         public Food(string description, int calorie)
         {

@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "PNOGaLCkSteYk+mr1fSgDQXW1wm69hu5E2gMnLsyIiJzlSbCk31pmtKqlll9QvSfwiofC0E7VrjmviqGEyReKw==",
+  "dgSpecHash": "TVdnqNSVv//x4WlWq8rt+toW80TyM7Oh9PhatxYke5nHGPFrViZgDnXK1Ek/fvnBd+yDH+rjgQU1KRbN10+4gg==",
   "success": true,
   "projectFilePath": "D:\\Repositories\\NutriLife\\NutriLife.API\\NutriLife.API.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.10\\microsoft.visualstudio.azure.containers.tools.targets.1.10.10.nupkg.sha512"
+    "C:\\Users\\eduar\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.10.10\\microsoft.visualstudio.azure.containers.tools.targets.1.10.10.nupkg.sha512",
+    "C:\\Users\\eduar\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

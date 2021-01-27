@@ -204,3 +204,4 @@ D:\Repositories\NutriLife\NutriLife.Test\obj\Debug\netcoreapp3.1\NutriLife.Test.
 D:\Repositories\NutriLife\NutriLife.Test\obj\Debug\netcoreapp3.1\NutriLife.Test.dll
 D:\Repositories\NutriLife\NutriLife.Test\obj\Debug\netcoreapp3.1\NutriLife.Test.pdb
 D:\Repositories\NutriLife\NutriLife.Test\obj\Debug\netcoreapp3.1\NutriLife.Test.genruntimeconfig.cache
+D:\Repositories\NutriLife\NutriLife.Test\bin\Debug\netcoreapp3.1\Bogus.dll

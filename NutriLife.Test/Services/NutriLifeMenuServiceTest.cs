@@ -25,14 +25,14 @@ namespace NutriLife.Test.Services
         {
             CreatePerson();
             var repositoryMenuMock = new Mock<IRepositoryMenu>();
-            repositoryMenuMock.Setup(menu => menu.GetAllMenuByTypeMealByPersonIdAsync(It.IsAny<int>(), It.IsAny<TypeMeal>()))
+            repositoryMenuMock.Setup(menu => menu.GetAllMenuByTypeMealByPersonIdAsync(It.IsAny<Guid>(), It.IsAny<TypeMeal>()))
                 .ReturnsAsync(GetFakeMenu());
 
-            repositoryMenuMock.Setup(menu => menu.SaveMealByPersonIdAsync(It.IsAny<int>(), It.IsAny<Meal>()))
+            repositoryMenuMock.Setup(menu => menu.SaveMealByPersonIdAsync(It.IsAny<Guid>(), It.IsAny<Meal>()))
               .ReturnsAsync(true);
 
             var repositoryPersonMock = new Mock<IRepositoryPerson>();
-            repositoryPersonMock.Setup(menu => menu.GetByIdAsync(It.IsAny<int>())).ReturnsAsync(_person);
+            repositoryPersonMock.Setup(menu => menu.GetByIdAsync(It.IsAny<Guid>())).ReturnsAsync(_person);
 
             _menuRequestService = new MenuService(repositoryMenuMock.Object, repositoryPersonMock.Object);
             _menurFoPersonService = new MenuForPersonService(repositoryMenuMock.Object);
@@ -115,7 +115,7 @@ namespace NutriLife.Test.Services
         }
         private void CreatePerson()
         {
-            _person = new Person("Eduardo", "Oliveira", 43, 95);
+            _person = new Person("Eduardo", "Oliveira", 43, 95, Guid.NewGuid());
         }
         private List<Menu> GetFakeMenu()
         {

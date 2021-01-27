@@ -14,3 +14,4 @@ D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.
 D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.csproj.CoreCompileInputs.cache
 D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.dll
 D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.pdb
+D:\Repositories\NutriLife\NutriLife.Core\obj\Debug\netcoreapp3.1\NutriLife.Core.csprojAssemblyReference.cache

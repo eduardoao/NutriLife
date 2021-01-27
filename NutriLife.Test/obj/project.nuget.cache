@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "cEwdtct4X7h0ufwhwOB7DmnkZOfsFyZ3wghUR1j/rJXE9JffHHgowSXcGxiukht7Y58P3UITePhLdMCdRSYFlw==",
+  "dgSpecHash": "/19c1/yOPrjKaxVPbiLpaLn0luhZGN8A//sEVNi+YyxSHcO6usSQYvAo2GClUcMm4N31u32PnqQWHGB3kP+TPw==",
   "success": true,
   "projectFilePath": "D:\\Repositories\\NutriLife\\NutriLife.Test\\NutriLife.Test.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\eduar\\.nuget\\packages\\bogus\\32.0.2\\bogus.32.0.2.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
     "C:\\Users\\eduar\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",

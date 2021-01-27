@@ -1,16 +1,15 @@
 ﻿using NutriLife.Core.Domain;
+using NutriLife.Result;
 
 namespace NutriLife.Core.Result
 {
-    public class PersonResult
+    public class PersonResult: AResultBase
     {
         public PersonResult(Person person)
         {
             Person = person;
         }
-
-        public string ResultCode { get; internal set; }
-        public Person Person { get; private set; }
-
+        
+        public Person Person { get; private set; }      
     }
 }

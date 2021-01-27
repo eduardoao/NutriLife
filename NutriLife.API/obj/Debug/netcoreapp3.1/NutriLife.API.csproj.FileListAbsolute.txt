@@ -21,3 +21,4 @@ D:\Repositories\NutriLife\NutriLife.API\obj\Debug\netcoreapp3.1\NutriLife.API.ge
 D:\Repositories\NutriLife\NutriLife.API\bin\Debug\netcoreapp3.1\NutriLife.Core.dll
 D:\Repositories\NutriLife\NutriLife.API\bin\Debug\netcoreapp3.1\NutriLife.Core.pdb
 D:\Repositories\NutriLife\NutriLife.API\obj\Debug\netcoreapp3.1\NutriLife.API.csproj.CopyComplete
+D:\Repositories\NutriLife\NutriLife.API\bin\Debug\netcoreapp3.1\AutoMapper.dll

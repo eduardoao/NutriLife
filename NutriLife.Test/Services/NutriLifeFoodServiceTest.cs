@@ -1,6 +1,8 @@
-﻿using NutriLife.Core.Domain;
+﻿using Moq;
+using NutriLife.Core.Domain;
 using NutriLife.Core.Services;
 using NutriLife.Domain.Enums;
+using NutriLife.Interfaces.Data;
 using NutriLife.Interfaces.Services;
 using System;
 using System.Threading.Tasks;
@@ -11,27 +13,32 @@ namespace NutriLife.Test.Services
     public class NutriLifeFoodServiceTest
     {
         #region Atributes
-        private IFoodService _foodService;
-        private Food food;
+        private IFoodService _foodService;        
+        private Food _food;
         public NutriLifeFoodServiceTest()
         {
-            _foodService = new FoodService();
+            CreateFood();
+            var repositoryFoodMock = new Mock<IRepositoryFood>();
+            repositoryFoodMock.Setup(food => food.SaveAsync(_food))
+                .ReturnsAsync(_food);
+            _foodService = new FoodService(repositoryFoodMock.Object);          
 
+        }
+
+        private void CreateFood()
+        {
             //Arrage 
-            food = new Food("Atum", 50);
-
+            _food = new Food("Atum", 50);
         }
         #endregion
 
         #region Public_Method
         [Fact]
         public void ShouldCreateFoodWithValues()
-        {
-            //Arrage 
-            var food = new Food("Atum", 50);
+        {           
 
             //ACT and Assert    
-            var result = _foodService.CreateFood(food);
+            var result = _foodService.CreateFood(_food);
 
             //Assert
             Assert.NotNull(result);
@@ -42,12 +49,10 @@ namespace NutriLife.Test.Services
         [Fact]
         public async Task ShouldCreateFoodWithNullValuesAsync()
         {
-            //ACT
-            food = null;
-
-            //ACT and Assert    
+            //ACT and Assert 
+            _food = null;
            
-            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => _foodService.CreateFood(food));
+            var exception = await Assert.ThrowsAsync<ArgumentNullException>(() => _foodService.CreateFood(_food));
 
             Assert.Equal("Food", exception.ParamName);
         }
